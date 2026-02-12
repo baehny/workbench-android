@@ -1,7 +1,7 @@
 # workbench-android
 Workbench project for running a `NativeActivity` in C# that calls a rust library using `winit`
 
-THIS PROJECT IS CURRENTLY NOT WORKING AS INTENDED SEE PROBLEM SECTION BELOW FOR DETAILS.
+
 
 ## Instructions
 
