@@ -63,7 +63,11 @@ cargo ndk -t x86_64-linux-android -P 21 build --release
 
 
 
-## Problem
+## ~~Problem~~
+
+**Solved:** Touch events work if we initialize OpenGL and swap_buffers atleast once.
+
+
 
 winit EventLoop does not receive touch events. Resize and keyboard events are working.
 

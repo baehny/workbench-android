@@ -17,3 +17,7 @@ crate-type = ["cdylib"]
 winit = { version = "0.30.12", features = ["android-native-activity"] }
 log = "0.4"
 android_logger = "0.14"
+
+glutin = "0.32.3"
+gl = "0.14.0"
+glow = "0.16.0"
