@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+
+		<RootNamespace>WorkbenchBS</RootNamespace>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<ApplicationId>com.benginestudios.WorkbenchBS</ApplicationId>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		
+		<!--
+		  Enables trim analyzers and full trimming during Release mode.
+		  To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/trimming-options#trimming-granularity
+		-->
+		<TrimMode>full</TrimMode>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="lib\arm64-v8a\" />
+		<Folder Include="lib\x86_64\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AndroidNativeLibrary Include="..\crates\workbench_bs_android\target\aarch64-linux-android\release\libworkbench_bs_android_lib.so" Link="lib\arm64-v8a\libworkbench_bs_android_lib.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</AndroidNativeLibrary>
+		<AndroidNativeLibrary Include="..\crates\workbench_bs_android\target\x86_64-linux-android\release\libworkbench_bs_android_lib.so" Link="lib\x86_64\libworkbench_bs_android_lib.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</AndroidNativeLibrary>
+	</ItemGroup>
+</Project>

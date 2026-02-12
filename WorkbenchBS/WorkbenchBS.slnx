@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="WorkbenchBS.csproj">
+    <Deploy />
+  </Project>
+</Solution>

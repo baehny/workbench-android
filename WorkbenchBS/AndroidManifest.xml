@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.benginestudios.WorkbenchBR">
+		  
+	<!-- Use the NativeActivity without deriving it in C# -->
+	<!--<application
+	android:allowBackup="true"
+	android:label="NativeActivity Mainloop"
+	android:supportsRtl="true">
+		<activity
+            android:name="android.app.NativeActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="true"
+			
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:screenOrientation="landscape"
+			android:windowSoftInputMode="adjustNothing"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+
+			<meta-data android:name="android.app.lib_name" android:value="workbench_bs_android_lib" />
+		</activity>
+	</application>-->
+
+	<!--Use the NativeActivity created by C# -->
+	<application android:label="WorkbenchBS" android:hasCode="true">
+
+		<activity android:name="com.benginestudios.WorkbenchBS.MainActivity"
+				  android:exported="true"
+				  android:configChanges="orientation|screenSize"
+				  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+
+			<meta-data android:name="android.app.lib_name"
+					   android:value="workbench_bs_android_lib" />
+
+			<meta-data android:name="android.app.func_name" android:value="ANativeActivity_onCreate" />
+		</activity>
+
+	</application>
+</manifest>
