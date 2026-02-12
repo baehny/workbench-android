@@ -57,12 +57,6 @@ impl ApplicationHandler for MyApp {
 
         match event {
             WindowEvent::CloseRequested => event_loop.exit(),
-            // WindowEvent::RedrawRequested => {
-            //     // Here you would call your renderer (wgpu, glow, etc.)
-            //     if let Some(window) = &self.window {
-            //         window.request_redraw();
-            //     }
-            // }
             _ => (),
         }
     }

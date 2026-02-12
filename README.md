@@ -52,13 +52,13 @@ $env:ANDROID_NDK_HOME = [Environment]::GetEnvironmentVariable("ANDROID_NDK_HOME"
 Under `crates\workbench_bs_android\` execute:
 
 ```
-cargo ndk -t aarch64-linux-android -P 36 build --release
+cargo ndk -t aarch64-linux-android -P 21 build --release
 ```
 
 or for the x64 emulator
 
 ```
-cargo ndk -t x86_64-linux-android -P 36 build --release
+cargo ndk -t x86_64-linux-android -P 21 build --release
 ```
 
 
